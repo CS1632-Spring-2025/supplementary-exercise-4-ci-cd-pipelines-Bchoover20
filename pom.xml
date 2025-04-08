@@ -35,7 +35,6 @@
     <url>http://github.com/wonsunahn/CS1632_CICD_JUnit/tree/master</url>
   </scm>
 
-  doublecheckthisitisprobablywrong
   <distributionManagement>
     <repository>
       <name> GitHub Apache Maven Packages </name>
