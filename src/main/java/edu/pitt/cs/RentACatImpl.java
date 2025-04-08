@@ -19,7 +19,20 @@ public class RentACatImpl implements RentACat {
 
 	public boolean returnCat(int id) {
 		// TODO: Fill in
-		return false;
+		Cat catFound = getCat(id);
+
+		boolean result = false;
+
+		// can null check because it is an object 
+		if (catFound != null && catFound.getRented() == true) {
+
+			result = true;
+			catFound.returnCat();				// can use same id as passed in 
+		}
+
+		
+
+		return result;
 	}
 
 	/**
@@ -34,7 +47,16 @@ public class RentACatImpl implements RentACat {
 
 	public boolean rentCat(int id) {
 		// TODO: Fill in
-		return false;
+
+		Cat catFound = getCat(id);
+		boolean result = false;
+
+		if (catFound != null && catFound.getRented() == false) {
+
+			result = true;
+			catFound.rentCat();
+		}
+		return result;
 	}
 
 	/**
@@ -48,7 +70,17 @@ public class RentACatImpl implements RentACat {
 
 	public boolean renameCat(int id, String name) {
 		// TODO: Fill in
-		return false;
+
+		Cat catFound = getCat(id);
+		boolean result = false;
+
+		// if the cat exists in the arrayList
+		if (catFound != null) {
+
+			catFound.renameCat(name);				// because they are just type cat 
+			result = true;
+		}
+		return result;
 	}
 
 	/**
@@ -63,7 +95,20 @@ public class RentACatImpl implements RentACat {
 
 	public String listCats() {
 		// TODO: Fill in
-		return "WRITE CODE FOR THIS";
+
+		StringBuilder sb = new StringBuilder();
+
+		for (Cat element : cats) {
+
+			if (element.getRented() == false) {
+
+				// does it add '\n' automatically - no it does not 
+				sb.append("ID ").append(element.getId()).append(". ").append(element.getName()).append("\n");
+			}
+		}
+
+		// return the stringbuilder
+		return sb.toString();
 	}
 
 	/**
@@ -74,6 +119,7 @@ public class RentACatImpl implements RentACat {
 	 * @return Cat searched for if exists, null otherwise
 	 */
 
+	// helper method already implemented 
 	private Cat getCat(int id) {
 
 		// null check
