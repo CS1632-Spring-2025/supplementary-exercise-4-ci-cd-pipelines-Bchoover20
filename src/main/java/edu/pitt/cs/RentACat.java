@@ -14,6 +14,9 @@ public interface RentACat {
 				return new RentACatSolution();
 			case MOCK:
 				// TODO: Return a mock object that emulates the behavior of the real object, if you feel you need one.
+				
+				// this should be returning mocked object right?
+				
 				return null;
 			default:
 				assert (false);
