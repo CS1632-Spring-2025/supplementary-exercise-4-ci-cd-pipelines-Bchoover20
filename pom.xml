@@ -35,11 +35,6 @@
     <url>http://github.com/wonsunahn/CS1632_CICD_JUnit/tree/master</url>
   </scm>
 
-  <properties>
-  <sonar.organization>cs1632-spring-2025</sonar.organization>
-  <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-  </properties>
-
 
   <distributionManagement>
     <repository>
@@ -50,6 +45,8 @@
   </distributionManagement>
 
   <properties>
+    <sonar.organization>cs1632-spring-2025</sonar.organization>
+    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
