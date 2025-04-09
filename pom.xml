@@ -36,10 +36,11 @@
   </scm>
 
 
-  <distributionManagement>
+    <distributionManagement>
     <repository>
-      <name> GitHub Apache Maven Packages </name>
-      <url> https://maven.pkg.github.com/CS1632-Spring-2025/supplementary-exercise-4-ci-cd-pipelines-Bchoover20 </url>
+      <id>github</id>
+      <name>GitHub Apache Maven Packages</name>
+      <url>https://maven.pkg.github.com/CS1632-Spring-2025/supplementary-exercise-4-ci-cd-pipelines-Bchoover20</url>
     </repository>
   </distributionManagement>
 
